@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Jogo da Cobrinha</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden; /* Evita as barras de rolagem */
+      background-image: url('/Imagens/Story\ Cyber\ Monday\ Oferta\ Smartphone\ Neon\ Rosa.png');
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      height: 100vh;
+      color: white;
+    }
+
+    #canvas-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    canvas {
+      border: 1px solid white;
+      background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente para o canvas */
+    }
+
+    #score {
+      margin-top: 20px;
+      font-size: 24px;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  </style>
+</head>
+<body>
+  <div id="score">Pontuação: <span id="currentScore">0</span> | Maior Pontuação: <span id="highScore">0</span></div>
+  <div id="canvas-container">
+    <canvas id="canvas"></canvas>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
